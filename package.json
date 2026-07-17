@@ -1,0 +1,34 @@
+{
+  "name": "setup-acts",
+  "version": "0.0.0",
+  "private": true,
+  "description": "GitHub Action to setup Atian-Tools",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ate47/setup-acts.git"
+  },
+  "keywords": [],
+  "author": "ate47",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ate47/setup-acts/issues"
+  },
+  "homepage": "https://github.com/ate47/setup-acts#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/exec": "^3.0.0",
+    "@actions/tool-cache": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "prettier": "^3.9.5",
+    "typescript": "^7.0.2"
+  }
+}
