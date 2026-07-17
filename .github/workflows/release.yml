@@ -8,6 +8,10 @@ on:
         required: true
         type: string
 
+# required to push branch
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
