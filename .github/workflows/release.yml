@@ -34,17 +34,7 @@ jobs:
           echo "major=$major" >> $GITHUB_OUTPUT
       - name: Create or checkout major branch
         run: |
-          major="${{ steps.extract.outputs.major }}"
-          if git show-ref --verify --quiet "refs/heads/$major" >/dev/null 2>&1; then
-            echo "Branch $major exists, checking out"
-            git checkout "$major"
-          else
-            echo "Branch $major does not exist, creating"
-            git checkout -b "$major"
-          fi
-      - name: Merge main into major branch
-        run: |
-          git merge origin/main --no-edit
+          git checkout -b "${{ steps.extract.outputs.major }}"
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -59,7 +49,7 @@ jobs:
           git commit -m "Build release ${{ github.event.inputs.version }}" || echo "No changes to commit"
       - name: Push major branch
         run: |
-          git push origin "${{ steps.extract.outputs.major }}"
+          git push origin "${{ steps.extract.outputs.major }}" --force
       - name: Create tag
         run: |
           git tag -f "${{ github.event.inputs.version }}"
