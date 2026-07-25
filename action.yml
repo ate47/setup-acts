@@ -2,8 +2,9 @@ name: setup-acts
 description: Setup Atian Tools on your Github Actions workflows.
 author: ate47
 branding:
-  icon: "tool"
+  icon: "package"
   color: "green"
+
 categories:
   - "utilities"
   - "tools"
@@ -20,5 +21,5 @@ outputs:
   acts-path:
     description: "Path to the atian tools binaries directory"
 runs:
-  using: "node20"
+  using: "node24"
   main: "lib/main.js"

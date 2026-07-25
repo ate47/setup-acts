@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "GitHub Action to setup Atian-Tools",
-  "main": "index.js",
+  "main": "src/main.ts",
   "scripts": {
     "build": "npx tsc",
     "format": "prettier --write src",
@@ -16,7 +16,6 @@
   "keywords": [],
   "author": "ate47",
   "license": "MIT",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/ate47/setup-acts/issues"
   },
