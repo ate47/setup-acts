@@ -4,6 +4,7 @@
   "private": true,
   "description": "GitHub Action to setup Atian-Tools",
   "main": "dist/main.js",
+  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "format": "prettier --write src",
