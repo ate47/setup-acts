@@ -45,7 +45,10 @@ jobs:
         run: npm run build
       - name: Commit compiled JS
         run: |
+          rm .gitignore
+          git add .gitignore
           git add dist
+          git add node_modules
           git commit -m "Build release ${{ github.event.inputs.version }}" || echo "No changes to commit"
       - name: Push major branch
         run: |

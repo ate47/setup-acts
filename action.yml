@@ -20,5 +20,5 @@ outputs:
   acts-path:
     description: "Path to the atian tools binaries directory"
 runs:
-  using: "node20"
+  using: "node24"
   main: "dist/main.js"
