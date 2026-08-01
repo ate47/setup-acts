@@ -4,7 +4,6 @@ author: ate47
 branding:
   icon: "package"
   color: "green"
-
 categories:
   - "utilities"
   - "tools"
@@ -21,5 +20,5 @@ outputs:
   acts-path:
     description: "Path to the atian tools binaries directory"
 runs:
-  using: "node24"
-  main: "lib/main.js"
+  using: "node20"
+  main: "dist/main.js"
